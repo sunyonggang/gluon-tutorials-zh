@@ -33,7 +33,7 @@ x
 nd.array([[1,2],[2,3]])
 ```
 
-我们经常需要创建随机数组，即每个元素的值都是随机采样而来，这个经常被用来初始化模型参数。以下代码创建数组，它的元素服从均值0方差1的正态分布。
+我们经常需要创建随机数组，即每个元素的值都是随机采样而来，这个经常被用来初始化模型参数。以下代码创建数组，它的元素服从均值0标准差1的正态分布。
 
 ```{.python .input  n=5}
 y = nd.random_normal(0, 1, shape=(3, 4))
@@ -80,7 +80,7 @@ nd.dot(x, y.T)
 
 我们会在之后的线性代数一章讲解这些运算符。
 
-## 形状转换（Broadcasting）
+## 广播（Broadcasting）
 
 当二元操作符左右两边ndarray形状不一样时，系统会尝试将其复制到一个共同的形状。例如`a`的第0维是3, `b`的第0维是1，那么`a+b`时会将`b`沿着第0维复制3遍：
 
@@ -95,7 +95,7 @@ print('a+b:', a+b)
 
 ## 跟NumPy的转换
 
-ndarray可以很方便同numpy进行转换
+ndarray可以很方便地同numpy进行转换
 
 ```{.python .input  n=26}
 import numpy as np
@@ -144,7 +144,7 @@ id(x) == before
 
 ## 截取（Slicing）
 
-NXNet NDArray 提供了各种截取方法。截取 x 的 index 为 1、2 的列：
+MXNet NDArray 提供了各种截取方法。截取 x 的 index 为 1、2 的行：
 
 ```{.python .input}
 x = nd.arange(0,9).reshape((3,3))
@@ -153,12 +153,14 @@ x[1:3]
 ```
 
 以及直接写入指定位置：
+
 ```{.python .input}
 x[1,2] = 9.0
 x
 ```
 
 多维截取：
+
 ```{.python .input}
 x = nd.arange(0,9).reshape((3,3))
 print('x: ', x)
@@ -166,6 +168,7 @@ x[1:2,1:3]
 ```
 
 多维写入：
+
 ```{.python .input}
 x[1:2,1:3] = 9.0
 x

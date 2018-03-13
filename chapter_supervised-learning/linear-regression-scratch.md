@@ -49,7 +49,7 @@ y += .01 * nd.random_normal(shape=y.shape)
 print(X[0], y[0])
 ```
 
-如果有兴趣，可以使用安装包中已包括的 Python 绘图包 `matplotlib`，生成第二个特征值 (`X[:, 1]`) 和目标值 `Y` 的散点图，更直观地观察两者间的关系。 
+如果有兴趣，可以使用安装包中已包括的 Python 绘图包 `matplotlib`，生成第二个特征值 (`X[:, 1]`) 和目标值 `Y` 的散点图，更直观地观察两者间的关系。
 
 ```{.python .input}
 import matplotlib.pyplot as plt
@@ -119,7 +119,7 @@ def square_loss(yhat, y):
 
 ## 优化
 
-虽然线性回归有显试解，但绝大部分模型并没有。所以我们这里通过随机梯度下降来求解。每一步，我们将模型参数沿着梯度的反方向走特定距离，这个距离一般叫**学习率（learning rate）** `lr`。（我们会之后一直使用这个函数，我们将其保存在[utils.py](../utils.py)。）
+虽然线性回归有显式解，但绝大部分模型并没有。所以我们这里通过随机梯度下降来求解。每一步，我们将模型参数沿着梯度的反方向走特定距离，这个距离一般叫**学习率（learning rate）** `lr`。（我们会之后一直使用这个函数，我们将其保存在[utils.py](../utils.py)。）
 
 ```{.python .input  n=10}
 def SGD(params, lr):
@@ -202,4 +202,8 @@ true_b, b
 
 尝试用不同的学习率查看误差下降速度（收敛率）
 
-**吐槽和讨论欢迎点**[这里](https://discuss.gluon.ai/t/topic/743)
+## 讨论
+
+欢迎扫码直达[本节内容讨论区](https://discuss.gluon.ai/t/topic/743)：
+
+![](../img/qr/linear-regression-scratch.png)

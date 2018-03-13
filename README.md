@@ -1,8 +1,8 @@
 # 通过MXNet/Gluon来动手学习深度学习
 
-主页在 [https://zh.gluon.ai/](https://zh.gluon.ai/)
+主页在 [https://zh.gluon.ai/](https://zh.gluon.ai/)。
 
-请使用 [https://discuss.gluon.ai](https://discuss.gluon.ai) 讨论或报告问题
+请使用 [https://discuss.gluon.ai](https://discuss.gluon.ai) 讨论或报告问题。
 
 ## 如何贡献
 
@@ -32,7 +32,7 @@ make html EVAL=0
 
 ## 编译PDF版本
 
-编译pdf版本需要xelatex，和思源字体。在Ubuntu可以这样安装
+编译pdf版本需要xelatex，和思源字体。在Ubuntu可以这样安装。
 
 ```bash
 sudo apt-get install texlive-full
@@ -49,12 +49,10 @@ sudo fc-cache -f -v
 
 这时候可以通过 `fc-list :lang=zh` 来查看安装的中文字体。
 
-然后可以编译了
+然后可以编译了。
 
 ```bash
-make latex
-cd _build/latex
-xelatex -interaction nonstopmode gluon_tutorials_zh.tex
+make pdf
 ```
 
 
@@ -96,7 +94,7 @@ dimensionality, 维数
 
 distribution, 分布
 
-einforcement learning, 强化学习
+reinforcement learning, 强化学习
 
 example, 样例
 
@@ -166,7 +164,7 @@ subspace estimation, 子空间估计
 
 supervised learning, 监督学习
 
-testing smaple, 测试样本
+testing sample, 测试样本
 
 testing, 测试
 
